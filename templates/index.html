@@ -1,23 +1,33 @@
 {% extends 'base.html' %}
 
+{% block title %} URLShortener {% endblock %}
+
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskShortener {% endblock %}</h1>
-    
-    <form method="post">
-    <div class="form-group">
-        <label for="url">URL</label>
-        <input type="text" name="url"
-               placeholder="URL to shorten" class="form-control"
-               value="{{ request.form['url'] }}" autofocus></input>
+<div class="col-md-12">
+    <div class="hero-container">
+        <div class="hero-content text-center text-white">
+            <h1>Welcome to URL Shortener</h1>
+            <div class="heading-description">Shorten your URLs quickly and easily!</div>
+            <form method="post">
+                <div class="form-group">
+                    <input type="text" name="url" placeholder="URL to shorten" class="form-control" value="{{ request.form['url'] }}" autofocus>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Shorten</button>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-    </form>
 
-    {% if short_url %}
+{% if short_url %}
     <hr>
-    <span>{{ short_url }}</span>
+    <div class="text-center">
+    <span><strong>Shortened URL:</strong><br/><a href="{{ short_url }}" target="_blank">{{ short_url }}</a></span>
+</div>
     {% endif %}
+
+
 {% endblock %}
+
