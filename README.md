@@ -19,7 +19,9 @@ This is a simple URL shortener web application built with Flask, SQLite, and Has
 
 ## Screenshots
 
-[]
+<img src="https://github.com/theinit01/urlShortener/blob/main/static/Screenshot%202024-04-10%20165314.png">
+<img src="https://github.com/theinit01/urlShortener/blob/main/static/Screenshot%202024-04-10%20165323.png">
+
 ## Usage
 
 1.   Access the application in your web browser by navigating to `http://localhost:5000`.
