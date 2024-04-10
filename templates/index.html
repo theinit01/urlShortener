@@ -3,7 +3,7 @@
 {% block title %} URLShortener {% endblock %}
 
 {% block content %}
-<div class="col-md-12">
+<div class="col-md-12" id="hero">
     <div class="hero-container">
         <div class="hero-content text-center text-white">
             <h1>Welcome to URL Shortener</h1>
@@ -20,12 +20,37 @@
     </div>
 </div>
 
-
+<hr>
 {% if short_url %}
-    <hr>
+    
     <div class="text-center">
-    <span><strong>Shortened URL:</strong><br/><a href="{{ short_url }}" target="_blank">{{ short_url }}</a></span>
+    <span><strong>Shortened URL:</strong><br/><a id="shortened-url" href="{{ short_url }}" target="_blank">{{ short_url }}</a></span><br>
+    <button class="copy-button" onclick="copyToClipboard()">Copy URL</button>
 </div>
+<script>
+    function copyToClipboard() {
+        var urlElement = document.getElementById("shortened-url");
+        var urlText = urlElement.innerText;
+        
+        // Create a temporary textarea element
+        var tempTextArea = document.createElement("textarea");
+        tempTextArea.value = urlText;
+        
+        // Append the textarea to the document body
+        document.body.appendChild(tempTextArea);
+        
+        // Select the text in the textarea
+        tempTextArea.select();
+        
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+        
+        // Remove the temporary textarea
+        document.body.removeChild(tempTextArea);
+        
+    }
+</script>
+
     {% endif %}
 
 
