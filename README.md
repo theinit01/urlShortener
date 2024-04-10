@@ -12,7 +12,7 @@ This is a simple URL shortener web application built with Flask, SQLite, and Has
 ## Installation
 
 1. Clone the repository
-	   `git clone https://github.com/your-username/your-repo.git`
+	   `git clone https://github.com/theinit01/urlShortener.git`
 2. Run the application
 		`python app.py` 
 
