@@ -1,16 +1,22 @@
 .hero-container {
     
     background-color: #17b884;
-    height: 400px; 
+    height: 53vh; 
     padding-top: 100px;
     padding: 20px;
     margin-top: 30px;
     background-size: cover;
-    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
 }
 
 .hero-content {
@@ -36,10 +42,29 @@
 
 footer{
     height: 8.5%;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    padding:10px;
+}
+.copy-button {
+    background-color: #ff5722 ; /* Green background color */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 1vh 1vw; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Increase font size */
+    margin-top: 10px; /* Add top margin */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 5px; /* Add border radius */
+    transition: background-color 0.3s; /* Add transition for hover effect */
 }
 
+/* Button Hover Effect */
+.copy-button:hover {
+    background-color: #e53935; /* Darker green background color on hover */
+}
 
 
